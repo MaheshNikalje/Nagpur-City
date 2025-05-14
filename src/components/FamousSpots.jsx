@@ -2,7 +2,7 @@ import React from 'react'
 
 const FamousSpots = () => {
   return (
-    <div>FamousSpots</div>
+    <div>FamousSpots My spots</div>
   )
 }
 
