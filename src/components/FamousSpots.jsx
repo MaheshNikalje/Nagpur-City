@@ -81,13 +81,91 @@ const FamousSpots = () => {
           'Respect temple rules and maintain cleanliness',
           'Stay hydrated, especially during summer visits'
         ] },
-     
+     {
+  id: 4,
+  title: 'Futala Lake',
+  image: '/futala.jpg',
+  description: 'Futala Lake is a scenic and popular evening spot in Nagpur, known for its colorful fountains, food stalls, and serene ambiance. It’s a favorite hangout place for locals and tourists alike.',
+  location: [
+    'City: Nagpur, Maharashtra',
+    'Area: Vayusena Nagar, about 6 km from city center',
+    'Accessible by autos, buses, and private vehicles'
+  ],
+  hours: [
+    'Open: 24 hours (best visited in the evening)',
+    'Best time to visit: Sunset and after dark when the fountain lights are on'
+  ],
+  special: [
+    'Musical fountain and lighting in the evening',
+    'Popular street food vendors around the lake',
+    'Relaxing spot for families and couples'
+  ],
+  tips: [
+    'Ideal for evening walks and photography',
+    'Keep an eye on children near the water',
+    'Try local snacks like bhel and pani puri',
+    'Carry drinking water if visiting in summer'
+  ]
+},
+ {
+  id: 5,
+  title: 'Ambazari Lake',
+  image: '/ambazari.webp',
+  description: 'Ambazari Lake is the largest lake in Nagpur and a key spot for nature lovers. Surrounded by lush greenery, it offers a peaceful escape with boating, a garden, and a walking trail.',
+  location: [
+    'City: Nagpur, Maharashtra',
+    'Area: Ambazari, near VNIT College',
+    'Accessible by buses, autos, and private vehicles'
+  ],
+  hours: [
+    'Open: 6:00 AM to 8:00 PM (daily)',
+    'Best time to visit: Early morning or evening'
+  ],
+  special: [
+    'Ambazari Garden with play area and musical fountain',
+    'Boating facility available (subject to season)',
+    'Jogging and walking track along the lake'
+  ],
+  tips: [
+    'Great for family outings and picnics',
+    'Wear comfortable shoes for walking',
+    'Avoid littering and keep the area clean',
+    'Mosquito repellent may be useful in the evening'
+  ]
+},
+
+{
+  id: 6,
+  title: 'Zero Mile Stone',
+  image: '/zero_mile.jpg',
+  description: 'Zero Mile Stone is a historic monument marking the geographical center of colonial India. It is a notable landmark in Nagpur and is considered an important point of interest in the city.',
+  location: [
+    'City: Nagpur, Maharashtra',
+    'Area: Wardha Road, Civil Lines',
+    'Easily accessible by all public and private transport'
+  ],
+  hours: [
+    'Open: 6:00 AM to 9:00 PM (daily)',
+    'Best time to visit: Daytime for historical exploration'
+  ],
+  special: [
+    'Historic monument with a sandstone pillar',
+    'Engraved distances to major cities during British rule',
+    'Adjacent to a small landscaped area for resting'
+  ],
+  tips: [
+    'Good spot for history and photography lovers',
+    'Read the inscriptions on the pillar for context',
+    'Combine visit with other central Nagpur attractions',
+    'No entry fee; quick visit suitable for tight schedules'
+  ]
+},
 
   ];
   return (
     <>
       <div className='bg-gradient-to-br from-gray-900 to-black text-white min-h-screen px-4 py-10'>
-        <h1 className='text-4xl font-bold text-center mb-12 underline'>Famous religous spots</h1>
+        <h1 className='text-4xl font-bold text-center mb-12 underline'>Famous spots in Nagpur</h1>
         <ul>
           {data.map((spot) => (
          (
@@ -116,8 +194,7 @@ const FamousSpots = () => {
                 {spot.tips.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             </div>
-            <h1>famous lake spots
-            </h1>
+
           </div>
         
 
