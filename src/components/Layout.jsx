@@ -7,7 +7,7 @@ import FamousFoods from './FamousFoods'
 const Layout = () => {
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
     <Outlet/>
     <Footer/>
     </>

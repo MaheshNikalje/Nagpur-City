@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { PiOrangeDuotone } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpen , setIsOpen] = useState(false)
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className=" border-gray-200 bg-black">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            MyApp
+          <PiOrangeDuotone className='text-orange-400 text-5xl' />
+          <span className="self-center text-4xl font-extrabold whitespace-nowrap dark:text-white">
+            My Nagpur
           </span>
         </a>
 
@@ -43,47 +44,23 @@ const Navbar = () => {
             } w-full md:block md:w-auto`}
           id="navbar-menu"
         >
-          <ul className="font-medium flex flex-col md:flex-row md:space-x-8 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-bold text-white flex flex-col md:flex-row md:space-x-8 mt-5 ml-2 rounded-lg  md:mt-0 md:border-0 ">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-              >
-                Home
-              </a>
+              <Link to="">
+              Home
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                About
-              </a>
+              <Link to="/spots">
+              Spots
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Services
-              </a>
+              <Link to="/foods">
+              Foods
+              </Link>
             </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
@@ -91,4 +68,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar
