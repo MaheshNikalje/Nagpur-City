@@ -164,12 +164,15 @@ const FamousSpots = () => {
   ];
   return (
     <>
-      <div className='bg-gradient-to-br from-gray-900 to-black text-white min-h-screen px-4 py-10'>
+    
+<div className='bg-cover bg-center h-screen' style={{backgroundImage:"url('/nagpurbg2.png')"}}>
+ </div>
+      <div className='bg-black text-white min-h-screen px-4 py-10  md:px-8 py-10"'>
         <h1 className='text-4xl font-bold text-center mb-12 underline'>Famous spots in Nagpur</h1>
-        <ul>
+        <ul className="space-y-12">
           {data.map((spot) => (
          (
-          <div key={spot.id} className='bg-white text-black rounded-2xl shadow-lg m-12 p-6 max-w-4xl mx-auto'>
+          <div key={spot.id} className='bg-white text-black rounded-2xl shadow-lg m-12 p-6 max-w-4xl mx-auto  md:p-8 max-w-screen-lg mx-auto'>
          <h2 className='text-2xl font-bold mb-3'> {spot.id}. {spot.title} </h2>
           <img src={spot.image} alt={spot.title} className='w-full h-100 object-cover rounded-xl border mb-4' />
           <h3>what is {spot.title}</h3>
