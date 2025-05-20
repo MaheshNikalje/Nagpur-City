@@ -10,24 +10,20 @@ const FamousSpots = () => {
       description: 'Deekshabhoomi is the sacred monument where Dr. B.R. Ambedkar converted to Buddhism along with over 600,000 followers on 14th October 1956. It marked a major social and spiritual movement in India known as the Dalit Buddhist Movement.',
       location: [
         'City: Nagpur, Maharashtra',
-        'Area: Near Ramdaspeth, close to the main city center',
-        'Easily accessible by road and rail'],
+        ],
       hours: [
         'Open: 6:00 AM to 9:00 PM (daily)',
-        'Best time to visit: Early morning or evening for a peaceful experience.'
+        
       ],
       special: [
         'Dhamma Chakra Pravartan Din (14 October)',
         'A major annual festival commemorating Ambedkar’s conversion.',
-        'Millions of followers visit Deekshabhoomi on this day.',
-        'Expect large crowds and special cultural events.'
+       
       ],
       tips: [
         'No entry fee',
         'Shoes must be removed before entering the Stupa',
-        'Photography is allowed but be respectful',
-        'Quiet and respectful behavior is appreciated inside',
-        'Ideal for spiritual seekers, history enthusiasts, and architecture lovers'
+       
       ]
     },
      {
@@ -165,49 +161,47 @@ const FamousSpots = () => {
   return (
     <>
     
-<div className='bg-cover bg-center h-screen' style={{backgroundImage:"url('/nagpurbg2.png')"}}>
- </div>
-      <div className='bg-black text-white min-h-screen px-4 py-10  md:px-8 py-10"'>
-        <h1 className='text-4xl font-bold text-center mb-12 underline'>Famous spots in Nagpur</h1>
-        <ul className="space-y-12">
-          {data.map((spot) => (
-         (
-          <div key={spot.id} className='bg-white text-black rounded-2xl shadow-lg m-12 p-6 max-w-4xl mx-auto  md:p-8 max-w-screen-lg mx-auto'>
-         <h2 className='text-2xl font-bold mb-3'> {spot.id}. {spot.title} </h2>
-          <img src={spot.image} alt={spot.title} className='w-full h-100 object-cover rounded-xl border mb-4' />
-          <h3>what is {spot.title}</h3>
-          <p>{spot.description}</p>
-          <h4>location</h4>
-          <div>{spot.location.map((element,index)=><p key={index}>{element}</p>)}</div>
-          <div>
-              <h4 className="font-semibold">🕐 Visiting Hours</h4>
-              <ul className="list-disc list-inside">
-                {spot.hours.map((item, i) => <li key={i}>{item}</li>)}
-              </ul>
-            </div>
-              <div>
-              <h4 className="font-semibold">📅 Special Days</h4>
-              <ul className="list-disc list-inside">
-                {spot.special.map((item, i) => <li key={i}>{item}</li>)}
-              </ul>
-            </div>
-             <div>
-              <h4 className="font-semibold">📝 Tips for Visitors</h4>
-              <ul className="list-disc list-inside">
-                {spot.tips.map((item, i) => <li key={i}>{item}</li>)}
-              </ul>
-            </div>
+<div className="bg-cover bg-center h-screen text-white text-center font-bold " style={{ backgroundImage: "url('/nagpurbg3.png')" }}>
+<p className='text-4xl pt-15'  >welcome to</p>
+<p className='  text-orange-600 text-2xl sm:text-4xl md:text-9x1 lg:text-9xl '> Nagpur</p>
+<p  className='text-3xl pt-5'>Experience the vibrant culture</p>
+<p  className='text-3xl'>rich history,and natural beauty</p>
+</div>
 
-          </div>
+<div className="bg-black text-white min-h-screen px-4 py-10 md:px-8">
+  <h1 className="text-4xl font-bold text-center mb-12">Famous spots in <span className='inline-block animate-bounce text-orange-600 text-4xl'>Nagpur</span></h1>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 md:font-bold gap-8">
+    {data.map((spot) => (
+      <div key={spot.id} className="bg-orange-200 text-black rounded-2xl shadow-lg p-6 md:p-8">
+        <h2 className="text-2xl font-bold mb-3">{spot.id}. {spot.title}</h2>
+        <img src={spot.image} alt={spot.title} className="w-60 h-60 object-cover rounded-xl border mb-4" />
         
+        <h3 className="font-semibold mb-1">What is {spot.title}?</h3>
+        <p className="mb-4">{spot.description}</p>
 
+        <h4 className="font-semibold">📍 Location</h4>
+        <div className="mb-4">{spot.location.map((element, index) => <p key={index}>{element}</p>)}</div>
 
-          )
+        <h4 className="font-semibold">🕐 Visiting Hours</h4>
+        <ul className="list-disc list-inside mb-4">
+          {spot.hours.map((item, i) => <li key={i}>{item}</li>)}
+        </ul>
 
-          ))
-      }
+        <h4 className="font-semibold">📅 Special Days</h4>
+        <ul className="list-disc list-inside mb-4">
+          {spot.special.map((item, i) => <li key={i}>{item}</li>)}
+        </ul>
+
+        <h4 className="font-semibold">📝 Tips for Visitors</h4>
+        <ul className="list-disc list-inside">
+          {spot.tips.map((item, i) => <li key={i}>{item}</li>)}
         </ul>
       </div>
+    ))}
+  </div>
+</div>
+
     </>
 
   )
