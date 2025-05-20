@@ -6,6 +6,7 @@ import { IoInformationCircleSharp } from "react-icons/io5";
 import { TbBackground } from 'react-icons/tb';
 import bg from "/background.png"
 
+
 const FamousFoods = () => {
 
   const foods = [
@@ -79,9 +80,9 @@ const FamousFoods = () => {
       <div className="relative w-full h-[400px]  bg-cover bg-center" style={{ backgroundImage: "url('/background.png')" }}>
         <div className="absolute  inset-0  bg-opacity-60 flex flex-col items-center justify-baseline text-center px-4">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 ">
-            Spice That Hits <span className='text-red-500 animate-pulse'>Different</span>
+            Spice That Hits <span className='text-red-500 animate-pulse '>Different</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white">
+          <p className="text-lg sm:text-xl text-white mb-5">
             Taste the Fire of Nagpur – Where Spice Meets Soul!
           </p>
         </div>
@@ -93,7 +94,7 @@ const FamousFoods = () => {
           <div key={index} className="bg-white shadow-gray-300 shadow-xl/35  rounded-2xl overflow-hidden hover:translate-y-2 duration-500 ">
             <img src={food.image} alt={food.name} className="w-full h-48 sm:h-64 object-cover " />
             <div className="p-4 sm:p-6">
-              <h2 className="text-xl sm:text-2xl text-red-500 font-semibold mb-2">{food.name}</h2>
+              <h2 className="text-xl sm:text-2xl text-red-500 font-semibold mb-2 ">{food.name}</h2>
 
               <div className='flex items-center mb-2'>
                 <MdLocationPin className='text-xl sm:text-2xl text-blue-400 mr-2' />
