@@ -5,6 +5,12 @@ import { MdLocationPin } from "react-icons/md";
 import { IoInformationCircleSharp } from "react-icons/io5";
 import { TbBackground } from 'react-icons/tb';
 import bg from "/background.png"
+import RotatingText from './RotatingText'
+import TextPressure from './TextPressure';
+import { BiFontFamily } from 'react-icons/bi';
+import GradientText from './GradientText'
+
+
 
 
 const FamousFoods = () => {
@@ -63,13 +69,13 @@ const FamousFoods = () => {
       location: 'Burhanpur Jalebi Center , Rasbhari Jalebi'
     },
     {
-      name: 'Jade Leaf',
+      name: 'Coffee',
       image: '/coffee.png',
       description: 'Jade Leaf By Explosive Flavours: A cozy delivery-only café in Dharampeth, Nagpur, offering a diverse range of artisanal coffees, teas, and indulgent beverages like Nutella and Lotus Biscoff frappes.',
       location: 'Shop 1 & 2, Khare Town, Zone 1, North Ambazari Road, Dharampeth, Nagpur'
     },
-    
- 
+
+
   ];
 
 
@@ -78,17 +84,63 @@ const FamousFoods = () => {
 
     <div className=" min-h-screen  bg-black py-10 px-5 ">
       <div className="relative w-full h-[400px]  bg-cover bg-center" style={{ backgroundImage: "url('/background.png')" }}>
+        <div style={{ position: 'relative', height: '300px' }}>
+        </div>
         <div className="absolute  inset-0  bg-opacity-60 flex flex-col items-center justify-baseline text-center px-4">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 ">
-            Spice That Hits <span className='text-red-500 animate-pulse '>Different</span>
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-4 flex gap-3 justify-around font-extrabold">
+            Spice That Hits - 
+            <span>
+              <RotatingText
+                texts={['Nagpur', 'Hotness', 'And', 'Different!']}
+                mainClassName="px-2  sm:px-2  mb-1 bg-black text-red-500 overflow-hidden py-0.5 sm:py-5 md:py-2 justify-center rounded-lg "
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
+              />
+            </span>
+
+
+
           </h1>
-          <p className="text-lg sm:text-xl text-white mb-5">
-            Taste the Fire of Nagpur – Where Spice Meets Soul!
-          </p>
+
+
+          <div >
+            <div style={{ position: 'relative', height: '300px' }}>
+              <TextPressure 
+                text="Taste the Fire of Nagpur – Where Spice Meets Soul!"
+                flex={true}
+                alpha={false}
+                stroke={false}
+                width={true}
+                weight={true}
+                italic={true}
+                textColor="white"
+                strokeColor="yello"
+                minFontSize={60}
+                
+              />
+            </div>
+          </div>
+
         </div>
       </div>
+      <div className='pt-10 text-6xl mb-20'>
+        <GradientText
+  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+  animationSpeed={1}
+  showBorder={false}
+  className="custom-class"
+>
+  Famous Food Of Nagpur!
+</GradientText>
+      </div>
 
-      <h1 className="text-5xl text-white font-bold text-center mb-10 mt-25" ><span className='text-orange-400'>Famous</span> Foods of <span className='text-green-600 animate-pulse '> Nagpur</span></h1>
+   
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  ">
         {foods.map((food, index) => (
           <div key={index} className="bg-white shadow-gray-300 shadow-xl/35  rounded-2xl overflow-hidden hover:translate-y-2 duration-500 ">
